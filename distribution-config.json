@@ -1,0 +1,27 @@
+{
+    "CallerReference": "ice-cream-app2-distribution-1",
+    "Comment": "Distribution for ice-cream-app2-98274",
+    "Enabled": true,
+    "Origins": {
+        "Quantity": 1,
+        "Items": [
+            {
+                "Id": "EZX3WVSVQPRLI",
+                "DomainName": "anthony-react-bucket.s3.amazonaws.com",
+                "S3OriginConfig": {
+                    "OriginAccessIdentity": "origin-access-identity/cloudfront/EZX3WVSVQPRLI"
+                }
+            }
+        ]
+    },
+    "DefaultCacheBehavior": {
+        "TargetOriginId": "EZX3WVSVQPRLI",
+        "ViewerProtocolPolicy": "redirect-to-https",
+        "AllowedMethods": {
+            "Quantity": 2,
+            "Items": ["GET", "HEAD"]
+        },
+        "CachePolicyId": "658327ea-f89d-4fab-a63d-7e88639e58f6"
+    },
+    "DefaultRootObject": "index.html"
+}

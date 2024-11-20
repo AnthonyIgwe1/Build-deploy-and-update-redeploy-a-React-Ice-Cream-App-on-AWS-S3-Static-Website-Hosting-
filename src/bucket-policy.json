@@ -1,0 +1,38 @@
+{
+aws s3api put-bucket-policy 
+    --bucket anthony-react-bucket 
+    --policy '{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "PublicReadGetObject",
+      "Effect": "Allow",
+      "Principal": "*",
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::anthony-react-bucket/*"
+    },
+    {
+      "Sid": "AllowCloudFrontServicePrincipal",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "cloudfront.amazonaws.com"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::anthony-react-bucket/*",
+      "Condition": {
+        "StringEquals": {
+          "AWS:SourceArn": "arn:aws:cloudfront::352768194846:distribution/E1BTOB12345ABC"
+        }
+      }
+    },
+    {
+      "Sid": "AllowCloudFrontOriginAccessIdentity",
+      "Effect": "Allow",
+      "Principal": {
+        "AWS": "arn:aws:iam::cloudfront:user/CloudFront Origin Access Identity E2EJIXJZXZ123"
+      },
+      "Action": "s3:GetObject",
+      "Resource": "arn:aws:s3:::anthony-react-bucket/*"
+    }
+  ]
+}'

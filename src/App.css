@@ -1,0 +1,80 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ }
+ body {
+  font-family: Arial, sans-serif;
+  background-color: #ffd1dc;
+  padding-top: 20px;
+  margin: 0;
+ }
+ .ice-cream-app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+h1 {
+ color: #ff69b4;
+ margin-bottom: 20px;
+}
+.ice-cream-image {
+ width: 100%;
+ max-width: 700px;
+ height: auto;
+ margin-bottom: 20px;
+}
+.flavor-of-the-day {
+ color: #30c0f0;
+ margin: 20px 0;
+}
+form {
+ max-width: 400px;
+ margin: 0 auto 20px;
+ background-color: #fff;
+ padding: 20px;
+ border-radius: 5px;
+ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+} 
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: #ff69b4;
+ }
+ select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+ } 
+
+ button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #ff69b4;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: bold;
+ }
+ button:hover {
+  background-color: #ff3399;
+ }
+ .orders-list {
+  list-style-type: none;
+  padding: 0;
+ }
+ .orders-list li {
+  background-color: #fff; 
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+ }
+ 
